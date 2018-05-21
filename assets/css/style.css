@@ -1,0 +1,119 @@
+body{ 
+    background-image:url("../images/worldmap.png");
+    background-size: 100%;
+}
+#Weclome{
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    color: hsl(0, 100%, 48%);
+    font-size: 50px;
+    text-shadow: #8cc63e 30px;
+}
+
+.row12{
+    background-color: transparent;
+}
+p {
+    text-align: center;
+    font-family: 'Yatra One', cursive;
+    font-size: 510px;
+    color:rgb(0, 0, 0);
+}
+#GL{
+    color: #a8bb95;
+}
+#beginP{
+    color: rgb(0, 0, 0);
+    margin: 20px;
+    font-family: 'Indie Flower', cursive;
+    font-size: 50px;
+    font-style: bold;
+
+}
+
+ul {
+	padding: 0px;
+}
+
+
+
+.maincontent {
+	background-color:rgb(231, 209, 85);
+	margin-top: 60px;
+	max-width: 700px;
+    border-radius: 50px;
+    box-shadow: #f70000  40px 40px green 40px 50px;
+    
+    
+}
+
+
+
+.btn-success {
+	background-color: #c63e3e ;
+	border: 1px solid #c63e55 ;
+    font-size: 24px ;
+    
+}
+
+.options li {
+    text-align: center;
+	list-style: none;
+	font-size: 24px;
+	padding:10px, 25px;
+	margin:10px auto;
+	max-width: 300px;
+	border: 1px solid #ef0000;
+}
+
+.options li:hover, .options li:focus {
+	background-color: #ef0000;
+	border: 1px solid #00adef;
+	color: black;
+}
+
+.correct {
+    text-align: center;
+	background-color: #8cc63e;
+	border: 1px solid #8cc63e;
+	font-weight: 700;
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
+}
+
+.wrong {
+	background-color: #ed008c;
+	border: 1px solid #ed008c;
+	font-weight: 700;
+	color: rgb(0, 0, 0);
+}
+
+.text, .options {
+    text-align: center;
+    font-family: 'Yatra One', cursive;
+    color:rgb(0, 0, 0);
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+.result {
+    text-align: center;
+    font-family: 'Yatra One', cursive;
+	margin-top: 40px;
+    margin-bottom: 40px;
+    color: #818b77;
+}
+
+.result p {
+    color: #677757;
+    text-align: center;
+    font-family: 'Yatra One', cursive;
+    font-weight: 700;
+
+}
+.time{
+    
+
+    font-size: 50px;
+    text-align: center;
+}
