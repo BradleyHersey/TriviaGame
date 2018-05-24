@@ -10,9 +10,6 @@ body{
     text-shadow: #8cc63e 30px;
 }
 
-.row12{
-    background-color: transparent;
-}
 p {
     text-align: center;
     font-family: 'Yatra One', cursive;
@@ -20,7 +17,7 @@ p {
     color:rgb(0, 0, 0);
 }
 #GL{
-    color: #a8bb95;
+    color: #3b3f37;
 }
 #beginP{
     color: rgb(0, 0, 0);
@@ -30,32 +27,25 @@ p {
     font-style: bold;
 
 }
-
 ul {
 	padding: 0px;
 }
-
-
-
 .maincontent {
-	background-color:rgb(231, 209, 85);
+    background-color: #a8bb95;
 	margin-top: 60px;
 	max-width: 700px;
     border-radius: 50px;
     box-shadow: #f70000  40px 40px green 40px 50px;
-    
-    
+    -webkit-animation-name: whitePulse;
+    -webkit-animation-duration: 15s;
+    -webkit-animation-iteration-count: infinite;
 }
-
-
 
 .btn-success {
 	background-color: #c63e3e ;
 	border: 1px solid #c63e55 ;
     font-size: 24px ;
-    
 }
-
 .options li {
     text-align: center;
 	list-style: none;
@@ -63,22 +53,28 @@ ul {
 	padding:10px, 25px;
 	margin:10px auto;
 	max-width: 300px;
-	border: 1px solid #ef0000;
+    border: 1px solid #ef0000;
+    border-radius: 50px;
 }
-
 .options li:hover, .options li:focus {
 	background-color: #ef0000;
 	border: 1px solid #00adef;
-	color: black;
+    color: black;
+    -webkit-animation-name: greenPulse2;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
 }
-
 .correct {
     text-align: center;
 	background-color: #8cc63e;
 	border: 1px solid #8cc63e;
-	font-weight: 700;
+	font-size: 25px;
     color: rgb(0, 0, 0);
     text-decoration: underline;
+    -webkit-transition: text-shadow 5s ease;
+    -moz-transition: text-shadow 5s ease;
+    -o-transition: text-shadow 5s ease;
+    transition: text-shadow 5s ease;
 }
 
 .wrong {
@@ -87,7 +83,6 @@ ul {
 	font-weight: 700;
 	color: rgb(0, 0, 0);
 }
-
 .text, .options {
     text-align: center;
     font-family: 'Yatra One', cursive;
@@ -95,25 +90,51 @@ ul {
 	margin-top: 25px;
 	margin-bottom: 25px;
 }
-
 .result {
     text-align: center;
     font-family: 'Yatra One', cursive;
 	margin-top: 40px;
     margin-bottom: 40px;
-    color: #818b77;
+    color: #59b300;
 }
-
 .result p {
-    color: #677757;
+    color: #60b808;
     text-align: center;
     font-family: 'Yatra One', cursive;
     font-weight: 700;
-
 }
 .time{
-    
-
+    font-family: monospace;
     font-size: 50px;
     text-align: center;
 }
+@-webkit-keyframes greenPulse {
+    from { background-color: #749a02; -webkit-box-shadow: 0 0 9px #333; }
+    50% { background-color: #91bd09; -webkit-box-shadow: 0 0 18px #91bd09; }
+    to { background-color: #749a02; -webkit-box-shadow: 0 0 9px #333; }
+  }
+  #startButton {
+    -webkit-animation-name: greenPulse;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+  }
+  @-webkit-keyframes whitePulse {
+    from { background-color: #ffffff; -webkit-box-shadow: 0 0 9px #333; }
+    50% { background-color: #646464; -webkit-box-shadow: 0 0 18px #f71008; }
+    to { background-color: #d3d4f8; -webkit-box-shadow: 0 0 9px #333; }
+  }
+  #startOverButton{
+    -webkit-animation-name: greenPulse;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+  }
+  @-webkit-keyframes greenPulse2 {
+    from { border-color: #749a02; -webkit-box-shadow: 0 0 9px #333; }
+    50% { border-color: #91bd09; -webkit-box-shadow: 0 0 18px #91bd09; }
+    to { border-color: #749a02; -webkit-box-shadow: 0 0 9px #333; }
+  }
+  #pic{
+      border-radius: 50px;
+      position: relative;
+      margin: 5% 0% 5% 31%;
+  }

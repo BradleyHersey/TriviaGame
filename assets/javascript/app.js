@@ -25,13 +25,13 @@ $(document).ready(function () {
                 showAnswer($(this).attr('id'));
             });
         }
-
+        var pic =$('#ppp').show();
         
     }
 
     function showAnswer(num) {
         stopTimer();
-        all.timer =30;
+        all.timer =10;
         var count = all.question;
         var obj = questions[count];
         var objCorrect = obj.q_correct_option
@@ -46,12 +46,8 @@ $(document).ready(function () {
             $('.result').html('<p>Sorry!</p>');
             $('#' + num).addClass('wrong');
         }
-        $('#' + objCorrect).addClass('correct');
-        $('.result').append('<p>Correct: ' + all.correct + '</p>');
-        $('.result').append('<p>Wrong: ' + all.wrong + '</p>');
-        $('.result').append('<p>Timed Out: ' + all.noanswer + '</p>');
         all.question++
-        if (all.question < 7) {
+        if (all.question < 8) {
             setTimeout(showQuestion, 5000);
         } else {
             setTimeout(gameOver, 5000);
@@ -72,16 +68,17 @@ $(document).ready(function () {
         $('.result').html('<p>Correct: ' + all.correct + '</p>');
         $('.result').append('<p>Wrong: ' + all.wrong + '</p>');
         $('.result').append('<p>Timed Out: ' + all.noanswer + '</p>');
-
+        $('#ppp').html('<img  id="pic"src="assets/images/greatstuff.jpg" >');
         $('.options').append('<button type="button" class="btn btn-success" id="startOverButton">Restart</button>');
         $('#startOverButton').click(function () {
             startOver();
             stopTimer();
+
            
         });
     }
     function startTimer() {
-        all.timer = 30;
+        all.timer = 10;
         $('.time').html('<h2> ' + all.timer + ' seconds</h2>');
         counter = setInterval(runTimer, 1000);
     }
@@ -103,7 +100,7 @@ $(document).ready(function () {
         all.wrong = 0;
         all.noanswer = 0;
         all.question = 0;
-        all.timer = 30;
+        all.timer = 10;
         startTrivia();
         
     }
@@ -117,6 +114,7 @@ $(document).ready(function () {
 
  
     $('#startOverButton').click(function () {
+        $('#ppp').html('');
         startOver();
     });
 
@@ -125,10 +123,10 @@ $(document).ready(function () {
         wrong: 0,
         noanswer: 0,
         question: 0,
-        timer: 30,
+        timer: 20,
     }
 
-    function question(number, cat, text, opt1, opt2, opt3, opt4, ans, date, img) {
+    function question(number, cat, text, opt1, opt2, opt3, opt4, ans ) {
         this.id = number;
         this.q_category_id = cat;
         this.q_text = text;
@@ -165,7 +163,7 @@ $(document).ready(function () {
     var question3 = new question(
         3,
         136,
-        "Which country use to be used as a place for England's criminals they didn't want in the country? ",
+        "Which country was used as a place for England's criminals they didn't want in the country? ",
         'Australia',
         'Canada',
         'China',
@@ -209,7 +207,7 @@ $(document).ready(function () {
     var question7 = new question(
         7,
         136,
-        'The country with the highest populous ?',
+        'The country with the highest population ?',
         'India',
         'China',
         'USA',
@@ -217,8 +215,19 @@ $(document).ready(function () {
         2,
      
     )
+    var question8 = new question (
+        8,
+        136,
+        'How many countries are there in Africa ?',
+        '100',
+        '50',
+        '25',
+        '54',
+        4,
 
-    var questions = [question1, question2, question3, question4, question5, question6, question7]
+    )
+
+    var questions = [question1, question2, question3, question4, question5, question6, question7,question8]
 });
 
 
