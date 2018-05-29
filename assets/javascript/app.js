@@ -95,13 +95,14 @@ $(document).ready(function () {
         clearTimeout(counter);
     }
     function startOver() {
-        stopTimer();
+        runTimer();
         all.correct = 0;
         all.wrong = 0;
         all.noanswer = 0;
         all.question = 0;
         all.timer = 10;
         startTrivia();
+        $('#pic').hide();
         
     }
 
